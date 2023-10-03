@@ -1,0 +1,23 @@
+
+Client(Postman) ----------> Server(Node/Express) ----------> Database(NoSQL - MongoDb)
+
+You can send data from client side
+
+1. Query String
+2. JSON Payload
+
+      Postman
+         POST BODY RAW JSON
+3. URL Segment
+
+Connection String
+
+How many operation you can do with Databases ?
+4
+
+CRUD
+
+1. Create
+2. Read
+3. Update
+4. Delete
