@@ -1,0 +1,9 @@
+Software Design Patterns
+  1. MVC Patterns / Monolithic Architecture
+  2. Micro Architecture Pattern
+
+  MVC
+
+  M = Model (Database/Tables/Queries)
+  V = View  (Frontend/HTML/CSS/JS)
+  C = Controller (Business Logic)
