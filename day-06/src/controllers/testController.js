@@ -6,22 +6,25 @@ exports.testHandler = (req, res) => {
 };
 
 exports.testOrdersHandler = (req, res) => {
+  function getRandomOrbitary(min, max) {
+    return Math.ceil(Math.random() * (max - min) + min);
+  }
   if (Math.random() > 0.5 ? true : false) {
     let orderArr = [];
 
     let num = Math.ceil(Math.random() * 20);
     for (let i = 0; i <= num; i++) {
       orderArr.push({
-        order_id: Math.ceil(Math.random() * 99000 + 1000),
-        arrives_at_utc: Math.random() > 0.5 ? Date.now() - 5 : Date.now() + 4,
-        paid_with: Math.random() > 0.5 ? "Cash" : "Online",
-        total_paid: Math.floor(Math.random() * 90 + 10),
+        order_id: getRandomOrbitary(1000, 99999),
+        arrives_at_utc: +new Date() + getRandomOrbitary(-7, 7),
+        paid_with: Math.random() > 0.5 ? "Cash" : "Wallet",
+        total_paid: getRandomOrbitary(10, 99),
       });
     }
 
     res.status(200).json({
       status: "success",
-      data: orderArr,
+      orders: orderArr,
     });
   } else {
     res.status(503).send();
