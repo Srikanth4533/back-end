@@ -1,0 +1,26 @@
+const express = require("express");
+const connectDB = require("./config/db");
+const userRoute = require("./routes/userRoute");
+const teacherRoute = require("./routes/teacherRoute");
+require("dotenv").config();
+
+const app = express();
+
+app.use(express.json());
+
+// MongoDB connection
+connectDB();
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "success",
+    message: "Home Page",
+  });
+});
+
+app.use("/api/user", userRoute);
+app.use("/api/teacher", teacherRoute);
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on PORT no ${process.env.PORT}`);
+});

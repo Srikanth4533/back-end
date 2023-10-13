@@ -12,3 +12,14 @@ JWT is used in SSO(Single Sign On) now a day
        3.2.1 Compare the password hash with db hash
        3.2.2 You may also Check the role
        3.2.3 Give the JWT Token to User
+
+
+Process Of JWT
+1. Registration
+2. Login
+      If login is success you will get JWT Token
+3. You will make a request with JWT
+     If you want to perform any action(CRUD). You have to send the JWT Token
+4. We have to verify the Token
+   If the token is valid and not expired then you can perform action
+   
