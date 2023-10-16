@@ -1,0 +1,19 @@
+
+Lets discuss our use cases
+
+What admin can do ?
+
+1. Create another admin
+2. Teachers
+3. Students
+
+What Teachers can do ?
+
+1. Can't create admin
+2. Can't create another teacher
+3. Can create student
+
+What students can do?
+
+1. Can't create another students
+2.
